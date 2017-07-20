@@ -11,6 +11,14 @@ pipeline {
         git 'http://github.com/explore-jenkins/pipeline-no-initial-jenkinsfile'
       }
     }
+    stage('Build') {
+      steps {
+        sh '''  sh "${tool 'gradle32'}/bin/gradle build"
+
+
+'''
+      }
+    }
   }
   environment {
     USER_EMAIL = 'jenkinsuser@mypipeline.com'
