@@ -13,9 +13,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '"${tool \'gradle32\'}/bin/gradle build"'
+        sh 'gradle build'
       }
     }
+  }
+  tools {
+    gradle 'gradle32'
   }
   environment {
     USER_EMAIL = 'jenkinsuser@mypipeline.com'
