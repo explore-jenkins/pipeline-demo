@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '"/usr/share/gradle/bin/gradle build"'
+        sh '/usr/share/gradle/bin/gradle build'
       }
     }
   }
