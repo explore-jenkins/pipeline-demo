@@ -207,10 +207,6 @@ project(':web') {
 
 	
 
-    apply plugin:'jetty'
-
-
-
     grettyRun.httpPort=8086
     grettyRun.contextPath="com.demo.pipeline"
 	
