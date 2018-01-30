@@ -1,8 +1,10 @@
 
 // Gradle build file for demonstration pipeline 
-// (c) Brent Laster 2017
+// (c) Brent Laster 2018
 
-
+plugins {
+  id "org.akhikhl.gretty" version "2.0.0"
+}
 
 // set a default version string
 ext.setVersion='0.0.1-SNAPSHOT'
@@ -209,12 +211,10 @@ project(':web') {
 
 
 
-    jettyRun.httpPort=8086
-    jettyRun.contextPath="com.demo.pipeline"
+    grettyRun.httpPort=8086
+    grettyRun.contextPath="com.demo.pipeline"
 	
-
-    apply plugin:'war'
-	
+   
 
     // helps using this with eclipse
     apply plugin: 'eclipse-wtp'
