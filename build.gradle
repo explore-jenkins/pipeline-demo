@@ -207,8 +207,8 @@ project(':web') {
 
 	
 
-    grettyRun.httpPort=8086
-    grettyRun.contextPath="com.demo.pipeline"
+    gretty.httpPort=8086
+    gretty.contextPath="com.demo.pipeline"
 	
    
 
