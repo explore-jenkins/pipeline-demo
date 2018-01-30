@@ -13,9 +13,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-        tool(name: 'gradle4', type: 'Gradle')
-        sh '''sh \'gradle build\'
-'''
+        tool 'gradle4'
+        sh 'gradle build'
       }
     }
   }
